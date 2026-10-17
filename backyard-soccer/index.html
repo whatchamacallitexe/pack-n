@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Backyard Soccer</title>
+  <style>body,html{margin:0;padding:0;background:#000;height:100%;overflow:hidden}#game{width:100%;height:100%}</style>
+  <script>
+    window.gameconfig = { core: "psx", name: "Backyard Soccer" };
+  </script>
+</head>
+<body>
+  <div id="game"></div>
+  <script>
+    EJS_player = "#game";
+    EJS_core = "psx";
+    EJS_gameName = "Backyard Soccer";
+    EJS_color = "#0064ff";
+    EJS_startOnLoaded = true;
+    EJS_pathtodata = "https://cdn.jsdelivr.net/gh/bubblfan/emu@master/";
+    EJS_biosUrl = "https://cdn.jsdelivr.net/gh/Abdess/retroarch_system@5f96368f6dbad5851cdb16a5041fefec4bdcd305/Sony%20-%20PlayStation/scph5501.bin";
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <base href="https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@86ba622d4f23e944352f50b6052fa16f22c5250d/basket-battle/">
+  <meta charset="utf-8">
+  <title>Basket Battle</title>
+  <style>html,body{margin:0;overflow:hidden;background:#000}#unity-canvas{width:100vw;height:100vh}</style>
+</head>
+<body>
+  <canvas id="unity-canvas" tabindex="-1"></canvas>
+  <script src="Build/BasketBattle.loader.js"></script>
+  <script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "Build/BasketBattle.data",
+      frameworkUrl: "Build/BasketBattle.framework.js",
+      codeUrl: "Build/BasketBattle.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "Basket Battle",
+      productVersion: "1.0"
+    });
+  </script>
+</body>
+</html>
