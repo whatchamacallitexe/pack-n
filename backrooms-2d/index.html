@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Backrooms 2D</title>
+  <style>html,body{margin:0;overflow:hidden;background:#000;width:100%;height:100%}#unity-canvas{width:100vw;height:100vh}</style>
+</head>
+<body>
+  <canvas id="unity-canvas" tabindex="-1"></canvas>
+  <script src="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/backrooms-2d/Build/Backrooms2D.loader.js"></script>
+  <script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/backrooms-2d/Build/Backrooms2D.data",
+      frameworkUrl: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/backrooms-2d/Build/Backrooms2D.framework.js",
+      codeUrl: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/backrooms-2d/Build/Backrooms2D.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "Backrooms 2D",
+      productVersion: "1.0"
+    });
+  </script>
+</body>
+</html>

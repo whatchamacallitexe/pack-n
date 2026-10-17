@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Bad Ice Cream 3</title>
+  <style>
+    html, body { margin: 0; padding: 0; background: black; overflow: hidden; height: 100%; width: 100%; }
+    #flash-container { width: 100%; height: 100%; }
+  </style>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+  <div id="flash-container"></div>
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = { autoplay: "on", unmuteOverlay: "hidden" };
+    window.addEventListener("DOMContentLoaded", () => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      player.style.width = "100%";
+      player.style.height = "100%";
+      document.getElementById("flash-container").appendChild(player);
+      player.load("https://cdn.jsdelivr.net/gh/ap-math-class/exams@main/swf/bad-ice-cream-3.swf");
+    });
+  </script>
+</body>
+</html>
