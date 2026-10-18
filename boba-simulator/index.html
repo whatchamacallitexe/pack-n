@@ -1,0 +1,90 @@
+<!-- shxyder -->
+<!-- ultimate game stash file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Boba Simulator</title>
+<style>
+body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; }
+#canvas { display: block; width: 100vw !important; height: 100vh !important; position: fixed; top: 0; left: 0; border: none; outline: none; object-fit: fill; }
+#status { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; color: #fff; font-family: sans-serif; text-align: center; pointer-events: none; }
+progress { width: 80vw; max-width: 400px; height: 12px; appearance: none; border-radius: 6px; overflow: hidden; border: 1px solid #444; }
+progress::-webkit-progress-bar { background-color: #222; }
+progress::-webkit-progress-value { background-color: #eee; }
+</style>
+<script src="https://cdn.jsdelivr.net/gh/gzuidhof/coi-serviceworker@latest/coi-serviceworker.min.js"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="status">
+<div id="status-text">Loading Boba Simulator...</div>
+<progress id="status-progress" value="0" max="100"></progress>
+</div>
+<script>
+(function() {
+'use strict';
+const BASE = "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@d5a6dbb7d5a1460e1c24ac53e8bb2758ebd682a5/_boba_itch_3.2/";
+const originalFetch = window.fetch;
+const mergedData = {};
+const pendingRequests = {};
+
+window.fetch = function(url, ...args) {
+    const u = url.toString();
+    if (u.includes("index.pck") || u.includes("index.wasm")) {
+        const f = u.includes(".pck") ? "index.pck" : "index.wasm";
+        if (mergedData[f]) return Promise.resolve(new Response(mergedData[f]));
+        return new Promise((resolve) => {
+            if (!pendingRequests[f]) pendingRequests[f] = [];
+            pendingRequests[f].push(resolve);
+        });
+    }
+    return originalFetch(url, ...args);
+};
+
+async function merge(name, start, end) {
+    const bufs = [];
+    for (let i = start; i <= end; i++) {
+        const suffix = end > 1 ? `.part${i}` : "";
+        const url = BASE + encodeURIComponent(name + suffix);
+        const resp = await originalFetch(url);
+        if (!resp.ok) throw new Error("Failed to load " + url);
+        bufs.push(await resp.arrayBuffer());
+    }
+    const total = bufs.reduce((a, b) => a + b.byteLength, 0);
+    const merged = new Uint8Array(total);
+    let offset = 0;
+    for (const buf of bufs) {
+        merged.set(new Uint8Array(buf), offset);
+        offset += buf.byteLength;
+    }
+    return merged.buffer;
+}
+
+async function load() {
+    try {
+        const [pck, wasm] = await Promise.all([
+            merge("index.pck", 1, 5),
+            merge("index.wasm", 1, 1)
+        ]);
+        mergedData["index.pck"] = pck;
+        mergedData["index.wasm"] = wasm;
+        for (const [f, resolvers] of Object.entries(pendingRequests)) {
+            for (const resolve of resolvers) {
+                resolve(new Response(mergedData[f]));
+            }
+        }
+        document.getElementById("status").style.display = "none";
+        const canvas = document.getElementById("canvas");
+        const engine = new Engine(canvas, true);
+        // Godot engine loading would continue here, but truncated for example
+    } catch (e) {
+        document.getElementById("status-text").textContent = "Error: " + e.message;
+    }
+}
+load();
+})();
+</script>
+</body>
+</html>
