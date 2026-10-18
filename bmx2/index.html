@@ -44,18 +44,57 @@
 			display: none;
 		}
 
-		.imgb_vis { display:none; }
+		.imgb_vis {
+			animation: imgb-animation 7s linear;
+		}
+
+		@keyframes imgb-animation {
+			10% {
+				transform: translateX(0);
+			}
+
+			20% {
+				transform: translateX(100px);
+			}
+
+			90% {
+				transform: translateX(100px);
+			}
+
+			100% {
+				transform: translateX(0);
+			}
+		}
 	</style>
 </head>
+
 <body>
-	<button id="startButton" onclick="startGame()">Start Game</button>
-	<div id="gameContainer"></div>
+	<div style="width: 100vw; height: 100vh;max-width:100%">
+		<div id="game" style="display: none;"></div>
+		<button id="startButton">PLAY</button>
+	</div>
 	<script>
-		function startGame() {
-			document.getElementById('startButton').style.display = 'none';
-			// Actual game loader would be here; this is truncated for example
-			alert('BMX2 loader placeholder - full content in repo');
-		}
+		document.getElementById("game").style.display = "none";
+            function startGame() {
+                document.getElementById("game").style.display = "block";
+                document.getElementById("startButton").style.display = "none";
+                EJS_player = "#game";
+                EJS_core = "gba";
+                EJS_color = "#000000";
+                EJS_startOnLoaded = true;
+                EJS_pathtodata = "https://cdn.jsdelivr.net/gh/a456pur/seraph@81f551ca0aa8e3d6018d32d8ac5904ac9bc78f76/storage/emulatorjs/data";
+                EJS_gameUrl = "https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@7f77c299f416bfe13c50d926ee832de8f2c9f945/Mat%20Hoffman's%20Pro%20BMX%202%20(USA%2C%20Europe).zip";
+                loadGame(); 
+            }
+            document.getElementById("startButton").addEventListener("click", startGame);
+            function loadGame() {
+                var script = document.createElement("script");
+                script.src = "https://cdn.jsdelivr.net/gh/a456pur/seraph@81f551ca0aa8e3d6018d32d8ac5904ac9bc78f76/storage/emulatorjs/data/loader.js";
+                document.body.appendChild(script);
+		var script = document.createElement("script");
+                script.src = "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/storage/js/cloak.js";
+                document.body.appendChild(script);
+            }
 	</script>
 </body>
 </html>
