@@ -64,10 +64,9 @@ async function merge(name, start, end) {
 
 async function load() {
     try {
-        const [pck, wasm] = await Promise.all([
-            merge("index.pck", 1, 5),
-            merge("index.wasm", 1, 1)
-        ]);
+        document.getElementById("status-text").textContent = "Merging files...";
+        const pck = await merge("index.pck", 1, 5);
+        const wasm = await merge("index.wasm", 1, 1);
         mergedData["index.pck"] = pck;
         mergedData["index.wasm"] = wasm;
         for (const [f, resolvers] of Object.entries(pendingRequests)) {
@@ -76,11 +75,10 @@ async function load() {
             }
         }
         document.getElementById("status").style.display = "none";
-        const canvas = document.getElementById("canvas");
-        const engine = new Engine(canvas, true);
-        // Godot engine loading would continue here, but truncated for example
+        // Actual Godot/engine start would be here; assets from CDN
+        console.log("Assets merged, starting game");
     } catch (e) {
-        document.getElementById("status-text").textContent = "Error: " + e.message;
+        document.getElementById("status-text").textContent = "Load error: " + e.message;
     }
 }
 load();

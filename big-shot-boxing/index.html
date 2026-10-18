@@ -1,0 +1,20 @@
+<!-- Ultimate Game Stash file--> 
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Big Shot Boxing</title>
+    <base href="https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/bigshotboxing/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>body { margin: 0; overflow: hidden; } canvas { display: block; }</style>
+</head>
+<body>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/bigshotboxing.json");
+    </script>
+    <div id="gameContainer" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
