@@ -1,0 +1,17 @@
+<!-- Ultimate Game Stash file-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <base href="https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/bitlife/">
+  <meta charset="utf-8">
+  <title>BitLife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;overflow:hidden;background:#000">
+  <canvas id="unity-canvas" style="width:100vw;height:100vh"></canvas>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    UnityLoader.instantiate("unity-canvas", "Build/BitLife.json");
+  </script>
+</body>
+</html>

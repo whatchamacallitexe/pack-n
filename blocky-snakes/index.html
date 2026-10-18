@@ -1,0 +1,17 @@
+<!-- Ultimate Game Stash file-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <base href="https://cdn.jsdelivr.net/gh/malpig/HTML-Games-V2@c80f20e7b02c5a026c9fede3366477ff7efa628c/blocky-snakes/">
+  <meta charset="utf-8">
+  <title>Blocky Snakes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;overflow:hidden;background:#000">
+  <canvas id="unity-canvas" style="width:100vw;height:100vh"></canvas>
+  <script src="UnityLoader.js"></script>
+  <script>
+    UnityLoader.instantiate("unity-canvas", "build.json");
+  </script>
+</body>
+</html>
