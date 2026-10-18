@@ -1,10 +1,21 @@
-<html>
-<!-- Ultimate Game Stash file--> 
-<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+<!-- Ultimate Game Stash file-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script src="https://cdn.jsdelivr.net/gh/bubbls/ruffle@8ba7f083496ec787377881857d02bb2012cd7ffa/ruffle.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Big Time Butter Baron</title>
+<style>html,body{margin:0;padding:0;background:#000;overflow:hidden;height:100%;width:100%}#c{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}ruffle-player{width:100%;height:100%;display:block}</style>
+<script src="https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.2.0-nightly.2025.10.2/ruffle.min.js"></script>
 </head>
 <body>
-<embed src="https://cdn.jsdelivr.net/gh/bubbls/ugss@63f44d001c95b775db57a9796ec7668541975062/B/Big_Time_Butter_Baron.swf" width="100%" height="100%">
+<div id="c"></div>
+<script>
+const SWF="https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@c9b0b39941430635355612483f8d2aae0fa30f9c/Big_Time_Butter_Baron.swf";
+const c=document.getElementById("c");
+function resize(){let w=innerWidth,h=Math.floor(w*3/4);if(h>innerHeight){h=innerHeight;w=Math.floor(h*4/3)}c.style.width=w+"px";c.style.height=h+"px"}
+addEventListener("resize",resize);
+addEventListener("DOMContentLoaded",()=>{resize();const r=RufflePlayer&&RufflePlayer.newest&&RufflePlayer.newest();if(!r){c.textContent="Ruffle failed";return}const p=r.createPlayer();p.style.width=p.style.height="100%";c.appendChild(p);p.load(SWF)});
+</script>
 </body>
 </html>
