@@ -18,12 +18,15 @@ FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/roms/balloon-fight.nes
 
 FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/swf/balls-and-bricks.swf: curl: (22) The requested URL returned error: 404
 
+FAILED https://cdn.jsdelivr.net/gh/bubbls/ugss@main/B/ballsandbricksgood/index.html: curl: (22) The requested URL returned error: 404
+
 FAILED https://cdn.jsdelivr.net/gh/bubbls/ruffle@ad6ffa3289c102eb4a4aced92a17e4ea291603d5/bananasim.swf: curl: (22) The requested URL returned error: 404
 
 BASE SKIP 899.0MB bubbls/UGS-Assets@3badff444b91edb139fd6d5052486b4f0ee33598/
 BASE FAIL yrgen73/BSD2@174be0db9145f7375365bda889a200e5cd31bbe0/: Cloning into '/tmp/cdn-upstreams/29a470b5145a6aa4'...
 fatal: could not read Username for 'https://github.com': No such device or address
 
+FILE basketball-legends-2020: https://cdn.jsdelivr.net/gh/faralong/test@main/basketballlegendss.html -> assets/cdn/dde1af80-basketballlegendss.html
 FAILED https://cdn.jsdelivr.net/gh/paigerodeghero/academicwebsite@897c910c65e6c68b04c44a6b6eba0b99d0f/style.css: curl: (22) The requested URL returned error: 404
 
 BASE MISS bubbls/UGS-Assets@main/battles
@@ -69,7 +72,6 @@ FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@8205c6599503d47644
 
 BASE SKIP 234.4MB bubblfan/web-port@main/class-of-09
 BASE SKIP 169.5MB Stinkalistic/SWAGgames@main/coalllc
-FILE codename-gordon: https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/SWFs/codenamegordon.swf -> assets/cdn/2c9b6fd5-codenamegordon.swf
 BASE SKIP 470.2MB shayderrr/idkugssuggestion@ec34844ada90ae2a936ec57337c1b871be5fa8a8/www
 FAILED https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/swf/CoverOrange_PP3-2.swf: curl: (22) The requested URL returned error: 404
 
