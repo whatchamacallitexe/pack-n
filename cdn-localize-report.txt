@@ -75,4 +75,4 @@ BASE SKIP 470.2MB shayderrr/idkugssuggestion@ec34844ada90ae2a936ec57337c1b871be5
 FAILED https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/swf/CoverOrange_PP3-2.swf: curl: (22) The requested URL returned error: 404
 
 BASE SKIP 154.0MB Stinkalistic/SWAGgames@main/crankit
-RUFFLE FAIL module 'urllib' has no attribute 'request'
+RUFFLE OK 2 wrappers
