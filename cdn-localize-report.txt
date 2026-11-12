@@ -8,6 +8,8 @@ FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/backrooms-2d/Build/Bac
 
 FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/backrooms-2d/Build/Backrooms2D.wasm: curl: (22) The requested URL returned error: 404
 
+FILE bad-ice-cream-2: https://unpkg.com/@ruffle-rs/ruffle -> ../_shared/22428d3d713f-ruffle
+FILE bad-ice-cream-3: https://unpkg.com/@ruffle-rs/ruffle -> ../_shared/22428d3d713f-ruffle
 FAILED https://cdn.jsdelivr.net/gh/bubbls/ugss@main/B/badicecream.swf: curl: (22) The requested URL returned error: 404
 
 FAILED https://cdn.jsdelivr.net/gh/bubbls/ugss@main/B/baldidecomp.swf: curl: (22) The requested URL returned error: 404
@@ -16,17 +18,19 @@ BASE SKIP 202.3MB bubbls/UGS-Assets@104c364f36401fd94165923f6b5a76c113e3540e/bal
 BASE SKIP 183.2MB bubbls/UGS-Assets@main/bfnsu
 FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/roms/balloon-fight.nes: curl: (22) The requested URL returned error: 404
 
+FILE balls-and-bricks: https://unpkg.com/@ruffle-rs/ruffle -> ../_shared/22428d3d713f-ruffle
 FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/swf/balls-and-bricks.swf: curl: (22) The requested URL returned error: 404
 
 FAILED https://cdn.jsdelivr.net/gh/bubbls/ugss@main/B/ballsandbricksgood/index.html: curl: (22) The requested URL returned error: 404
 
+FILE banana-simulator: https://unpkg.com/@ruffle-rs/ruffle -> ../_shared/22428d3d713f-ruffle
 FAILED https://cdn.jsdelivr.net/gh/bubbls/ruffle@ad6ffa3289c102eb4a4aced92a17e4ea291603d5/bananasim.swf: curl: (22) The requested URL returned error: 404
 
+FILE bandit-gunslingers: https://unpkg.com/@ruffle-rs/ruffle -> ../_shared/22428d3d713f-ruffle
 BASE SKIP 899.0MB bubbls/UGS-Assets@3badff444b91edb139fd6d5052486b4f0ee33598/
 BASE FAIL yrgen73/BSD2@174be0db9145f7375365bda889a200e5cd31bbe0/: Cloning into '/tmp/cdn-upstreams/29a470b5145a6aa4'...
 fatal: could not read Username for 'https://github.com': No such device or address
 
-FILE basketball-legends-2020: https://cdn.jsdelivr.net/gh/faralong/test@main/basketballlegendss.html -> assets/cdn/dde1af80-basketballlegendss.html
 FAILED https://cdn.jsdelivr.net/gh/paigerodeghero/academicwebsite@897c910c65e6c68b04c44a6b6eba0b99d0f/style.css: curl: (22) The requested URL returned error: 404
 
 BASE MISS bubbls/UGS-Assets@main/battles
