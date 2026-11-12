@@ -69,8 +69,7 @@ FAILED https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@8205c6599503d47644
 
 BASE SKIP 234.4MB bubblfan/web-port@main/class-of-09
 BASE SKIP 169.5MB Stinkalistic/SWAGgames@main/coalllc
-FAILED https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/SWFs/codenamegordon.swf: curl: (22) The requested URL returned error: 403
-
+FILE codename-gordon: https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/SWFs/codenamegordon.swf -> assets/cdn/2c9b6fd5-codenamegordon.swf
 BASE SKIP 470.2MB shayderrr/idkugssuggestion@ec34844ada90ae2a936ec57337c1b871be5fa8a8/www
 FAILED https://cdn.jsdelivr.net/gh/schoolstuff1337/supplies@main/swf/CoverOrange_PP3-2.swf: curl: (22) The requested URL returned error: 404
 
